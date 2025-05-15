@@ -1,6 +1,6 @@
 # 🛡️ Phishing Detection using Machine Learning
 > _Un système complet pour capturer des URLs HTTP, extraire des caractéristiques, et détecter des tentatives de phishing en temps réel grâce au Machine Learning._  
-> **"Sniffe les paquets, analyse les URLs, stoppe le phishing."**
+> **"Sniffe les paquets, analyse les URLs, classifier les sites web (légitime ou phishing)."**
 ---
 
 ## 🧭 Table des matières
