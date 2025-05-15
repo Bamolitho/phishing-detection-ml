@@ -13,7 +13,7 @@
 - [🧪 Tests](#-tests)
 - [📁 Structure du projet](#-structure-du-projet)
 - [📄 Licence](#-licence)
-- [👤 Auteurs](#-auteur)
+- [👤 Auteurs](#-auteurs)
 - [🙏 Remerciements](#-remerciements)
 
 ---
