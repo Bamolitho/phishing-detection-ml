@@ -1,14 +1,6 @@
 # 🛡️ Phishing Detection using Machine Learning
 > _Un système complet pour capturer des URLs HTTP, extraire des caractéristiques, et détecter des tentatives de phishing en temps réel grâce au Machine Learning._  
 > **"Sniffe les paquets, analyse les URLs, stoppe le phishing."**
-
-Ce projet propose un **système complet de détection de phishing en temps réel** basé sur :
-- 🔎 la capture du trafic réseau (HTTP) avec **Scapy**
-- 🧠 l'extraction automatique de **caractéristiques d'URL**
-- 🤖 la classification des URL par un **modèle de Machine Learning**
-- 🌐 une **API Flask** pour intégrer la prédiction dans n’importe quel outil
-- 📊 une interface **web de monitoring** avec logs et statistiques
-- 🗄️ une **base de données SQL Server** pour conserver les détections
 ---
 
 ## 🧭 Table des matières
@@ -34,13 +26,13 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 ---
 
 ## 🚀 Fonctionnalités principales
-
+Ce projet propose un **système complet de détection de phishing en temps réel** basé sur :
 - 📡 Capture des paquets HTTP en temps réel avec Scapy
-- 🧠 Extraction de 13+ caractéristiques d'URL (IP, longueur, entropie, etc.)
+- 🧠 Extraction automatique de 13+ caractéristiques d'URL (IP, longueur, entropie, etc.)
 - 🤖 Classification intelligente (phishing vs légitime) avec un modèle ML
-- 🌐 API Flask pour interagir avec le modèle
-- 📊 Interface web pour visualiser les verdicts
-- 🧾 Stockage SQL Server (date, IP, protocole, verdict)
+- 🌐 **API Flask** pour intégrer la prédiction dans n’importe quel outil (pour interagir avec le modèle)
+- 📊 Interface web **web de monitoring** avec logs et statistiques
+- 🧾 **Base de données SQL Server** pour conserver les détections (date, IP, protocole, verdict)
 
 ---
 
