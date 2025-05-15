@@ -21,7 +21,7 @@
 ## 📸 Démo
 
 ![Demo](./screenshots/demo.gif)  
-# > _Ajoute ici un gif, une capture ou une vidéo de l'interface de capture + détection._
+>_ À venir
 
 ---
 
