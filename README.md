@@ -63,7 +63,7 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 
 ```bash
 # 1. Cloner le repo
-git clone https://github.com/tonpseudo/phishing-detection-ml.git
+git clone https://github.com/Bamolitho/phishing-detection-ml.git
 cd phishing-detection-ml
 
 # 2. Créer un environnement virtuel
