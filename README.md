@@ -63,5 +63,22 @@ source venv/bin/activate  # ou .\venv\Scripts\activate sur Windows
 
 # 3. Installer les dépendances
 pip install -r requirements.txt
+```
+
+## ▶️ Utilisation
+```bash
+# 1. Lancer le serveur Flask (prédiction)
+cd api
+python3 receptFlask.py
+
+# 2. Lancer la capture des paquets HTTP
+cd network_capture
+sudo python3 captRequest.py -i [interface] #ifconfig (linux) pour trouver l'interface actif
+
+# 3. Lancer le terminal sur une autre fenetre ou ouvrir un navigateur web
+# Terminal : wget http://example.com
+# Navigateur web : http://example.com
+```
+
 
 
