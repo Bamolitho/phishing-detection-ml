@@ -80,5 +80,23 @@ sudo python3 captRequest.py -i [interface] #ifconfig (linux) pour trouver l'inte
 # Navigateur web : http://example.com
 ```
 
+## 👤 Auteur
+<img src="https://media.licdn.com/dms/image/v2/D4E03AQE0RS8O9YuIBQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731164064570?e=1752710400&v=beta&t=SL7J1e3sF2duZ7tIablBmQb0CzHfy6kArP7a2lzcw40" alt="Amolitho Baldé" width="120" style="border-radius: 50%; margin-right: 15px;" align="left">
+
+**Amolitho Baldé**  
+💼 *Étudiant en Télécommunications & Réseaux*  
+🔗 [LinkedIn](https://www.linkedin.com/in/amolithobalde/) | [Portfolio](https://bamolitho.github.io/portfolio/)
+<p>Université Sorbonne Paris Nord</p>
+
+<br clear="left"/>
+
+<img src="https://media.licdn.com/dms/image/v2/D4E03AQE6W960oHvj7g/profile-displayphoto-shrink_200_200/B4EZZAPunCHEAg-/0/1744834599732?e=1752710400&v=beta&t=3v_xSXek9HFZZTx0vzI22pzobe7jCrBwBK7u9_5jR3c" alt="Amolitho Baldé" width="120" style="border-radius: 50%; margin-right: 15px;" align="left">
+
+**Edmond Kameni Junior**  
+💼 *Étudiant en Télécommunications & Réseaux*  
+🔗 [LinkedIn](https://www.linkedin.com/in/edmond-junior-kameni-6715a9278/)
+<p>Université Sorbonne Paris Nord</p>>
+
+<br clear="left"/>
 
 
