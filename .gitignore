@@ -1,0 +1,34 @@
+# ⛔️ Fichiers Python à ignorer
+__pycache__/
+*.py[cod]
+*.so
+
+# 🔒 Fichiers sensibles
+.env
+
+# 📂 Environnements virtuels
+venv/
+monenv/
+
+# 🧠 Modèles ML
+*.h5
+*.pkl
+
+# 🧪 Bases de données
+*.sqlite
+*.db
+
+# 📊 Données
+*.xlsx
+*.csv
+
+# 📝 Logs
+*.log
+
+# 🔍 IDE
+.vscode/
+.idea/
+*.swp
+
+# 📦 Dépendances OS ou pip
+*.egg-info/
