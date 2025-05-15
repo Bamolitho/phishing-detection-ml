@@ -29,7 +29,7 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 ## 📸 Démo
 
 ![Demo](./screenshots/demo.gif)  
-> _Ajoute ici un gif, une capture ou une vidéo de l'interface de capture + détection._
+# > _Ajoute ici un gif, une capture ou une vidéo de l'interface de capture + détection._
 
 ---
 
@@ -55,7 +55,6 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 | API         | Flask                            |
 | Base de données | SQL Server (via pyodbc)     |
 | Web         | HTML / Jinja / Bootstrap         |
-| Tests       | pytest *(à ajouter si besoin)*   |
 
 ---
 
