@@ -1,0 +1,26 @@
+# ==== Machine Learning ====
+numpy>=1.24
+pandas>=1.5
+scikit-learn>=1.2
+tensorflow>=2.11
+
+# ==== Analyse réseau ====
+scapy>=2.5
+urllib3
+ipaddress
+
+# ==== API ====
+flask>=2.2
+requests
+
+# ==== Base de données ====
+pyodbc  # Connexion SQL Server
+
+# ==== Visualisation ====
+matplotlib
+
+# ==== Traitement Excel/CSV (si besoin) ====
+openpyxl  # lecture de fichiers .xlsx
+
+# ==== Autres ====
+argparse  # utile pour les scripts CLI
