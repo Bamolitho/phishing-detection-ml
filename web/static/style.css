@@ -1,0 +1,289 @@
+/* RESET GLOBAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #2d2dff, #5ad1ff);
+  min-height: 100vh;
+  animation: backgroundFade 10s infinite alternate;
+  padding-bottom: 2rem;
+}
+
+/* Animation douce pour le fond */
+@keyframes backgroundFade {
+  0% { background: linear-gradient(135deg, #2d2dff, #5ad1ff); }
+  100% { background: linear-gradient(135deg, #1f1fff, #72eaff); }
+}
+
+/* HEADER */
+header {
+  background-color: #1a1a40;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+
+/* MAIN CONTAINER */
+main {
+  background-color: rgba(255, 255, 255, 0.95);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  animation: slideUp 0.7s ease-out;
+}
+
+/* Apparition fluide */
+@keyframes slideUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* FORMULAIRES */
+form {
+  display: flex;
+  flex-wrap: wrap;      /* Passer à la ligne */
+  gap: 15px;              /* espace entre éléments */
+  align-items: center;    /* alignement vertical */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+select {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f0f4ff;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+  outline: none;
+  background-color: #e0edff;
+  box-shadow: 0 0 5px #80bdff;
+}
+
+button {
+  padding: 1rem;
+  background: linear-gradient(135deg, #0066ff, #00ccff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap; /* Empêche le bouton de se couper */
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+}
+
+/* PARAGRAPHES ET LIENS */
+p {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #333;
+}
+
+a {
+  color: #0066ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* TABLEAUX */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  margin-top: 1.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+thead {
+  background-color: #3498db;
+  color: white;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+  background-color: #f0f8ff;
+}
+
+/* STATS BOX */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background-color: #ecf0f1;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.stats span {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+/* FILTRES */
+.filter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.filter-form input,
+.filter-form select {
+  flex: 1 1 200px;
+}
+
+/* ALERTES (TOASTS) */
+.alert-toast {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #e74c3c;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+  opacity: 0.95;
+  animation: slide-in 0.5s ease-out;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.95;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  main {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+
+  .filter-form {
+    flex-direction: column;
+  }
+
+  .stats {
+    flex-direction: column;
+  }
+}
+
+/* EXPORT CSV/JSON : alignement à droite */
+.export {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 1em;
+}
+
+/* FOOTER */
+footer {
+  position: relative;
+  padding: 1em;
+  text-align: center;
+  min-height: 3.5em; /* pour garder place au bouton */
+}
+
+/* Bouton de déconnexion */
+footer .logout-btn {
+  position: absolute;
+  right: 1em;    /* à droite */
+  bottom: 1em;
+  background-color: transparent;
+  border: none;
+  color: red;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+footer .logout-btn a {
+  color: red;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+footer .logout-btn a:hover {
+  text-decoration: underline;
+}
+
+.password-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-container input {
+  flex: 1;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.flash-message {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.flash-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}

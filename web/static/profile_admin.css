@@ -1,0 +1,149 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2d2dff, #5ad1ff);
+    min-height: 100vh;
+    padding: 2rem;
+    color: #333;
+    transition: color 0.3s ease; /* Pour effet fluide si tu changes couleur texte par langue */
+  }
+  
+  /* HEADER */
+  header {
+    text-align: center;
+    color: white;
+    margin-bottom: 2rem;
+    user-select: none; /* évite sélection accidentelle lors du clic pour changer langue */
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  /* PROFILE CONTAINER */
+  .profile-container {
+    max-width: 900px;
+    margin: auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease; /* Prêt pour dark mode ou autres styles liés à langue */
+  }
+  
+  /* PROFILE HEADER */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap; /* pour éviter débordements avec textes longs */
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #0066ff;
+    flex-shrink: 0; /* empêcher la photo de rétrécir */
+  }
+  
+  .info h2 {
+    margin-bottom: 0.5rem;
+    word-break: break-word; /* pour gérer les noms longs ou mots longs */
+  }
+  
+  .verified {
+    color: green;
+    font-weight: bold;
+  }
+  
+  /* DETAILS */
+  .profile-details p {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+    word-wrap: break-word; /* pour éviter overflow avec textes longs */
+  }
+  
+  /* TOOLS */
+  .admin-tools {
+    margin-top: 2rem;
+  }
+  
+  .admin-tools h3 {
+    margin-bottom: 1rem;
+    color: #0066ff;
+  }
+  
+  .admin-tools ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
+  
+  .admin-tools li {
+    margin-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    word-break: break-word;
+  }
+  
+  /* ACTION BUTTONS */
+  .actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .btn {
+    background: #0066ff;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    white-space: nowrap; /* empêcher les boutons de casser en plusieurs lignes */
+    min-width: 120px; /* taille minimale pour les boutons */
+    text-align: center;
+  }
+  
+  .btn:hover {
+    background: #004bcc;
+  }
+  
+  .btn.danger {
+    background: #e74c3c;
+  }
+  
+  .btn.danger:hover {
+    background: #c0392b;
+  }
+  
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .profile-header {
+      flex-direction: column;
+      align-items: center;
+      text-align: center; /* centrer texte pour mobile */
+    }
+  
+    .actions {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .btn {
+      width: 100%; /* boutons prennent toute la largeur dispo */
+      min-width: auto; /* annuler la min-width sur mobile */
+    }
+  }

@@ -1,0 +1,183 @@
+/* profile_user.css */
+
+/* Reset et base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+body {
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* En-tête */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+/* Section profil principal */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(44, 62, 80, 0.1);
+  margin-bottom: 30px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #3498db;
+}
+
+.info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #2980b9;
+}
+
+.info p {
+  font-size: 1.1rem;
+  margin: 6px 0;
+}
+
+.verified {
+  color: green;
+  font-weight: bold;
+  margin-left: 8px;
+}
+
+/* Détails du profil */
+.profile-details {
+  background-color: #ffffff;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(44, 62, 80, 0.1);
+  margin-bottom: 30px;
+}
+
+.profile-details p {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.alert-link {
+  cursor: pointer;
+  color: #27ae60;
+  font-weight: 600;
+  margin: 0 5px;
+  transition: color 0.3s ease;
+}
+
+.alert-link:hover {
+  color: white;
+}
+
+/* Actions : boutons */
+.actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  background-color: #2980b9;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #3498db;
+}
+
+.btn.danger {
+  background-color: #e74c3c;
+}
+
+.btn.danger:hover {
+  background-color: #c0392b;
+}
+
+
+.messages {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .messages li {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  .messages li.error {
+    background-color: #f8d7da;
+    color: #721c24;
+  }
+  
+  .messages li.success {
+    background-color: #d4edda;
+    color: #155724;
+  }
+
+  .btn.danger {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .btn.danger:hover {
+    background-color: #c9302c;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn.arrow {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    text-align: center;
+  }
+  
+  .btn.arrow:hover {
+    background-color: #0056b3;
+  }
+  
