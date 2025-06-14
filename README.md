@@ -29,7 +29,7 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 - 🤖 Classification intelligente (phishing vs légitime) avec un modèle ML
 - 🌐 **API Flask** pour intégrer la prédiction dans n’importe quel outil (pour interagir avec le modèle)
 - 📊 Interface web **web de monitoring** avec logs et statistiques
-- 🧾 **Base de données SQL Server** pour conserver les détections (date, IP, protocole, verdict)
+- 🧾 **Base de données SQLite** pour conserver les détections (date, IP, protocole, verdict)
 
 ---
 
