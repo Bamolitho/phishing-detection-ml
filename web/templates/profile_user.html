@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil Utilisateur</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='profile_user.css') }}">
+</head>
+<body>
+
+  <header>
+    <h1 id="title">Profil Utilisateur</h1>
+  </header>
+
+  <main>
+
+    <section class="profile-header">
+      <img src="https://imgs.search.brave.com/FFCu9Puaq1Z1RcxzrlnaFYjZnhUDfnauPwr80jgtJwk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vNDQyODg3/MS80NzM3OS92LzYw/MC9kZXBvc2l0cGhv/dG9zXzQ3Mzc5MTg3/Ni1zdG9jay1pbGx1/c3RyYXRpb24taWRz/LWludHJ1c2lvbi1k/ZXRlY3Rpb24tc3lz/dGVtLWFjcm9ueW0u/anBn" alt="Photo de profil" class="profile-photo" />
+      <div class="info">
+        <h2 id="name">{{ user.fullname }}</h2>
+        <p><strong id="email-label">Email :</strong> 
+          <span id="email">{{ user.email }}</span> 
+        </p>
+        <p><strong id="role-label">Rôle :</strong> 
+          <span id="role">{{ user.role }}</span>
+        </p>
+      </div>
+    </section>
+
+    <section class="profile-details">
+      <div class="button-group">
+        <!-- Bouton Voir Captures -->
+        <a href="{{ url_for('index') }}" class="btn arrow">
+          Voir captures récentes →
+        </a>
+    
+        <!-- Bouton Voir Statistiques -->
+        <a href="{{ url_for('afficher_stats') }}" class="btn arrow">
+          Voir statistiques →
+        </a>
+      </div>
+    </section>    
+
+    <div class="actions">
+      <a href="{{ url_for('changer_mot_de_passe') }}" class="btn" id="btn-change-password">Modifier le mot de passe</a>
+      
+      <button class="btn danger" onclick="window.location.href='/logout'" id="btn-logout">
+        Se déconnecter
+      </button>
+
+      <form method="POST" action="{{ url_for('supprimer_compte') }}" onsubmit="return confirm('Es-tu sûr de vouloir supprimer ton compte ? Cette action est irréversible.')">
+        <button type="submit" class="btn danger" id="btn-delete-account">Supprimer mon compte</button>
+      </form>
+      
+    </div>
+
+  </main>
+ 
+</body>
+</html>

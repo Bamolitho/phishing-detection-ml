@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Profil Administrateur Multilingue</title>
+  <link rel="stylesheet" href="../static/profile_admin.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="title">Profil Administrateur</h1>
+  </header>
+
+  <main>
+
+    <section class="profile-header">
+      <img src="https://via.placeholder.com/150" alt="Photo de profil" class="profile-photo" />
+      <div class="info">
+        <h2 id="name">Amomo Baldé</h2>
+        <p><strong id="email-label">Email :</strong> <span id="email">amomo@example.com</span> <span class="verified">✅ vérifié</span></p>
+        <p><strong id="role-label">Rôle :</strong> <span id="role">Administrateur</span></p>
+      </div>
+    </section>
+
+    <section class="profile-details">
+      <p><strong id="last-login-label">Dernière connexion :</strong> <span id="last-login">09/06/2025 à 14h23</span></p>
+
+      <p>
+        <strong id="language-label">Langue :</strong>
+        <select name="langue" id="lang-select">
+          <option value="fr">Français</option>
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </p>
+
+      <p><strong id="alerts-label">Alertes activées :</strong>
+        <span class="alert-link" onclick="goToIndex()">✅ <span id="alert-phishing">Phishing</span></span> |
+        <span class="alert-link" onclick="goToIndex()">✅ <span id="alert-malware">Malware</span></span> |
+        <span class="alert-link" onclick="goToIndex()">✅ <span id="alert-ip">IP suspecte</span></span>
+      </p>
+    </section>
+
+    <section class="admin-tools">
+      <h3 id="tools-title">Outils Administrateur</h3>
+      <ul>
+        <li><a href="/admin/users" id="manage-users">👥 Gérer les utilisateurs</a></li>
+        <li><a href="/admin/stats" id="system-stats">📊 Statistiques du système</a></li>
+        <li><a href="/admin/security-settings" id="security-settings">⚙️ Paramètres de sécurité</a></li>
+        <li><a href="/admin/logs" id="logs">🔒 Logs de connexion</a></li>
+        <li><a href="/admin/modules" id="manage-modules">📦 Gérer les modules</a></li>
+      </ul>
+    </section>
+
+    <div class="actions">
+      <button class="btn" onclick="window.location.href='/changer-mot-de-passe'" id="btn-change-password">Modifier le mot de passe</button>
+      <button class="btn danger" onclick="window.location.href='/logout'" id="btn-logout">Se déconnecter</button>
+    </div>
+
+  </main>
+
+  <script>
+    // Traductions pour chaque langue
+    const translations = {
+      fr: {
+        title: "Profil Administrateur",
+        emailLabel: "Email :",
+        roleLabel: "Rôle :",
+        lastLoginLabel: "Dernière connexion :",
+        languageLabel: "Langue :",
+        alertsLabel: "Alertes activées :",
+        alertPhishing: "Phishing",
+        alertMalware: "Malware",
+        alertIp: "IP suspecte",
+        toolsTitle: "Outils Administrateur",
+        manageUsers: "👥 Gérer les utilisateurs",
+        systemStats: "📊 Statistiques du système",
+        securitySettings: "⚙️ Paramètres de sécurité",
+        logs: "🔒 Logs de connexion",
+        manageModules: "📦 Gérer les modules",
+        btnChangePassword: "Modifier le mot de passe",
+        btnLogout: "Se déconnecter"
+      },
+      en: {
+        title: "Administrator Profile",
+        emailLabel: "Email:",
+        roleLabel: "Role:",
+        lastLoginLabel: "Last login:",
+        languageLabel: "Language:",
+        alertsLabel: "Alerts enabled:",
+        alertPhishing: "Phishing",
+        alertMalware: "Malware",
+        alertIp: "Suspicious IP",
+        toolsTitle: "Administrator Tools",
+        manageUsers: "👥 Manage Users",
+        systemStats: "📊 System Statistics",
+        securitySettings: "⚙️ Security Settings",
+        logs: "🔒 Connection Logs",
+        manageModules: "📦 Manage Modules",
+        btnChangePassword: "Change Password",
+        btnLogout: "Log out"
+      },
+      es: {
+        title: "Perfil de Administrador",
+        emailLabel: "Correo electrónico:",
+        roleLabel: "Rol:",
+        lastLoginLabel: "Última conexión:",
+        languageLabel: "Idioma:",
+        alertsLabel: "Alertas activadas:",
+        alertPhishing: "Phishing",
+        alertMalware: "Malware",
+        alertIp: "IP sospechosa",
+        toolsTitle: "Herramientas de Administrador",
+        manageUsers: "👥 Gestionar usuarios",
+        systemStats: "📊 Estadísticas del sistema",
+        securitySettings: "⚙️ Configuración de seguridad",
+        logs: "🔒 Registros de conexión",
+        manageModules: "📦 Gestionar módulos",
+        btnChangePassword: "Cambiar contraseña",
+        btnLogout: "Cerrar sesión"
+      }
+    };
+
+    // Fonction qui met à jour tous les textes en fonction de la langue choisie
+    function updateLanguage(lang) {
+      document.getElementById("title").textContent = translations[lang].title;
+      document.getElementById("email-label").textContent = translations[lang].emailLabel;
+      document.getElementById("role-label").textContent = translations[lang].roleLabel;
+      document.getElementById("last-login-label").textContent = translations[lang].lastLoginLabel;
+      document.getElementById("language-label").textContent = translations[lang].languageLabel;
+      document.getElementById("alerts-label").textContent = translations[lang].alertsLabel;
+      document.getElementById("alert-phishing").textContent = translations[lang].alertPhishing;
+      document.getElementById("alert-malware").textContent = translations[lang].alertMalware;
+      document.getElementById("alert-ip").textContent = translations[lang].alertIp;
+      document.getElementById("tools-title").textContent = translations[lang].toolsTitle;
+      document.getElementById("manage-users").textContent = translations[lang].manageUsers;
+      document.getElementById("system-stats").textContent = translations[lang].systemStats;
+      document.getElementById("security-settings").textContent = translations[lang].securitySettings;
+      document.getElementById("logs").textContent = translations[lang].logs;
+      document.getElementById("manage-modules").textContent = translations[lang].manageModules;
+      document.getElementById("btn-change-password").textContent = translations[lang].btnChangePassword;
+      document.getElementById("btn-logout").textContent = translations[lang].btnLogout;
+    }
+
+    // Appelé quand la langue change
+    document.getElementById("lang-select").addEventListener("change", (e) => {
+      updateLanguage(e.target.value);
+      // Optionnel : tu peux ici envoyer la langue au backend pour sauvegarder la préférence
+    });
+
+    // Initialisation : charge le français par défaut
+    updateLanguage("fr");
+
+    function goToIndex() {
+      window.location.href = "/index";
+    }
+  </script>
+
+</body>
+</html>

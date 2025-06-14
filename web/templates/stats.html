@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Statistiques - Détection Phishing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <h1>📊 Statistiques</h1>
+  </header>
+
+  <main>
+    <section class="stats">
+      <canvas id="statsChart" width="400" height="400"></canvas>
+      <p>Total URLs : 🧮 {{ stats.total }} | 🛑 Phishing : {{ stats.phish }} | ✅ Légitimes : {{ stats.legit }} | 📉 Taux de phishing : {{ stats.phish_rate }}%</p>
+    </section>
+
+    <div class="section">
+      <a href="{{ url_for('index') }}"><button>⬅ Retour aux captures récentes</button></a>
+        <a href="{{ url_for('profile_user') }}"><button>⬅ Retour au profil</button></a>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Système de détection de phishing</p>
+  </footer>
+
+  <script>
+    const ctx = document.getElementById('statsChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Phishing', 'Légitimes'],
+        datasets: [{
+          label: 'Répartition',
+          data: [{{ stats.phish }}, {{ stats.legit }}],
+          backgroundColor: ['#dc3545', '#28a745'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'bottom'
+          },
+          title: {
+            display: true,
+            text: 'Répartition des URLs détectées'
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>

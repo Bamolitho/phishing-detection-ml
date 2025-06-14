@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Détection de site web de phishing</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+  <style>
+    .empty {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Détection de site web de phishing</h1>
+    <a href="{{ url_for('afficher_stats') }}">
+      <button>📊 Voir les statistiques</button>
+    </a>
+    <a href="{{ url_for('profile_user') }}">
+      <button>Aller au profil</button>
+    </a>
+  </header>
+
+  <main>
+    <h2>Bienvenue sur le système de détection de site web de Phishing</h2>
+
+    <!-- Section de recherche et filtres -->
+    <section class="search-filter">
+      <form id="filterForm" method="get" style="display: flex; gap: 10px; align-items: center;">
+        <input
+          type="text"
+          id="searchInput"
+          name="search"
+          placeholder="🔍 Rechercher une URL, IP, etc."
+          value="{{ request.args.get('search', '') }}"
+        />
+
+        <select id="filtreSelect" name="filtre">
+          <option value="">-- Filtrer --</option>
+          <option value="Phishing" {% if request.args.get('filtre') == 'Phishing' %}selected{% endif %}>Phishing</option>
+          <option value="Legitimate" {% if request.args.get('filtre') == 'Legitimate' %}selected{% endif %}>Légitime</option>
+          <option value="HTTP" {% if request.args.get('filtre') == 'HTTP' %}selected{% endif %}>Protocole : HTTP</option>
+          <option value="HTTPS" {% if request.args.get('filtre') == 'HTTPS' %}selected{% endif %}>Protocole : HTTPS</option> 
+        </select>
+
+        <button type="submit">APPLIQUER</button>
+        <button type="button" id="resetBtn">RESET</button>
+      </form>
+    </section>
+
+    <!-- Section des alertes -->
+    <section class="alerts">
+      <br />
+      <h3 class="section-title red">🚨 CAPTURES RÉCENTES</h3>
+
+
+      <section class="export">
+        <a href="{{ url_for('export_csv') }}" class="btn btn-primary">
+          <button>📤 Exporter CSV</button>
+        </a>
+
+        <a href="{{ url_for('export_json') }}" class="btn btn-success">
+          <button>📤 Exporter JSON</button>
+        </a>
+      </section>
+
+      <table id="detectionsTable">
+        <thead>
+          <tr>
+            <th>Timestamp</th>
+            <th>IP Source</th>
+            <th>IP Destination</th>
+            <th>Protocole</th>
+            <th>URL</th>
+            <th>Verdict</th>
+          </tr>
+        </thead>
+        <tbody id="detectionsBody">
+          <tr><td colspan="6" class="empty">Chargement des données...</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    {% if session.get('user_id') %}
+    <button class="logout-btn">
+      <a href="{{ url_for('logout') }}">Se déconnecter</a>
+    </button>
+    {% endif %}
+    <p>©️ 2025 Système de détection de phishing</p>
+  </footer>
+
+  <script>
+    const detectionsBody = document.getElementById('detectionsBody');
+    const searchInput = document.getElementById('searchInput');
+    const filtreSelect = document.getElementById('filtreSelect');
+    const resetBtn = document.getElementById('resetBtn');
+    const filterForm = document.getElementById('filterForm');
+
+    async function chargerDetections() {
+      try {
+        const response = await fetch('/detections_json');
+        if (!response.ok) throw new Error('Erreur lors du chargement des détections');
+        const detections = await response.json();
+
+        const search = searchInput.value.trim().toLowerCase();
+        const filtre = filtreSelect.value.toLowerCase();
+
+        const detectionsFiltres = detections.filter(d => {
+          const rechercheOk = !search || 
+            d.url.toLowerCase().includes(search) || 
+            d.ip_src.toLowerCase().includes(search) || 
+            d.ip_dst.toLowerCase().includes(search);
+
+          const verdict = d.verdict ? d.verdict.toLowerCase() : '';
+          const protocole = d.protocole ? d.protocole.toLowerCase() : '';
+          const filtreOk = !filtre || verdict === filtre || protocole === filtre;
+
+          return rechercheOk && filtreOk;
+        });
+
+        detectionsBody.innerHTML = '';
+
+        if (detectionsFiltres.length === 0) {
+          detectionsBody.innerHTML = '<tr><td colspan="6" class="empty">Aucune détection trouvée.</td></tr>';
+          return;
+        }
+
+        detectionsFiltres.forEach(d => {
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td>${d.timestamp}</td>
+            <td>${d.ip_src}</td>
+            <td>${d.ip_dst}</td>
+            <td>${d.protocole}</td>
+            <td>${d.url}</td>
+            <td>${d.verdict}</td>
+          `;
+          detectionsBody.appendChild(tr);
+        });
+
+      } catch (error) {
+        detectionsBody.innerHTML = '<tr><td colspan="6" class="empty">Erreur lors du chargement des données.</td></tr>';
+        console.error(error);
+      }
+    }
+
+    // Chargement initial
+    chargerDetections();
+
+    // Recharge toutes les 5 secondes
+    setInterval(chargerDetections, 5000);
+
+    // Empêche la soumission par défaut et applique les filtres
+    filterForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      chargerDetections();
+    });
+
+    // Réinitialisation des champs
+    resetBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      filtreSelect.value = '';
+      chargerDetections();
+    });
+  </script>
+</body>
+</html>
