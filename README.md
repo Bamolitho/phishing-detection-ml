@@ -76,6 +76,7 @@ sudo chmod +x launch_all.sh
 # 4. Ouvrir un navigateur pour accéder à l'interface web via l'adresse suivante
 http://localhost:5003
 ```
+```bash
 phishing-detection-ml/
 │
 ├── 📁 data/                     # 📊 Contient les jeux de données bruts et prétraités
@@ -133,7 +134,7 @@ phishing-detection-ml/
 ├── launch_all.sh              # 🖥️ Script shell pour tout lancer automatiquement (API, sniffing, web)
 ├── README.md                  # 📘 Documentation complète du projet : objectif, installation, démo
 └── requirements.txt           # 📦 Dépendances Python à installer avec `pip install -r requirements.txt`
-
+```
 
 ## Perspectives
 
