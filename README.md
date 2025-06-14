@@ -1,5 +1,5 @@
-# 🛡️ Phishing Detection using Machine Learning
-> _Un système complet pour capturer des URLs HTTP, extraire des caractéristiques, et détecter des tentatives de phishing en temps réel grâce au Machine Learning._  
+# 🛡️ Détéction de site web non légitime
+> _Un système complet pour capturer des URLs HTTP, extraire des caractéristiques, et détecter des tentatives de phishing en temps réel grâce à l'apprentissage automatique._  
 > **"Sniffe les paquets, analyse les URLs, classifier les sites web (légitime ou phishing)."**
 ---
 
@@ -42,11 +42,11 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 |-------------|----------------------------------|
 | Langage     | Python 3.11                      |
 | Capture     | Scapy                            |
-| Machine Learning | TensorFlow, scikit-learn   |
+| Machine Learning | TensorFlow, scikit-learn    |
 | Données     | pandas, re, urllib               |
 | API         | Flask                            |
-| Base de données | SQL Server (via pyodbc)     |
-| Web         | HTML / Jinja / Bootstrap         |
+| Base de données | SQLite                       |
+| Web         | HTML / CSS / JS                  |
 
 ---
 
@@ -67,36 +67,12 @@ pip install -r requirements.txt
 
 ## ▶️ Utilisation
 ```bash
-# 1. Lancer le serveur Flask (prédiction)
-python3 api/receptFlask.py
+# Se placer dans le dossier du projet, phishing-detection-ml.
+sudo chmod +x launch_all.sh # Ajouter des privilèges d'exécution pour l'utilisateur
+./launch_all.sh ou bash launch_all.sh  # Pour lancer les 3 composantes (Modèle ML, la sonde, l'app flask contenant les fonctionnalités essentielles pour l'interface web)
 
-# 2. Lancer la capture des paquets HTTP
-sudo python3 network_capture/captRequest.py -i [interface] # ifconfig (linux) pour trouver l'interface active
-
-# 3. Lancer le terminal sur une autre fenetre ou ouvrir un navigateur web
-# Terminal : wget http://example.com
-# Navigateur web : http://example.com
-
-# Nota : Se placer dans le dossier parent des dossiers model, api, network_capture... est important
+# Ouvrir un navigateur et urtiliser http://localhost:5003 pour accéder à l'interface web
 ```
 
-## 👤 Auteurs
-<img src="https://media.licdn.com/dms/image/v2/D4E03AQE0RS8O9YuIBQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1731164064570?e=1752710400&v=beta&t=SL7J1e3sF2duZ7tIablBmQb0CzHfy6kArP7a2lzcw40" alt="Amolitho Baldé" width="120" style="border-radius: 50%; margin-right: 15px;" align="left">
-
-**Amolitho Baldé**  
-💼 *Étudiant en Télécommunications & Réseaux*  
-🔗 [LinkedIn](https://www.linkedin.com/in/amolithobalde/) | [Portfolio](https://bamolitho.github.io/portfolio/)
-<p>Université Sorbonne Paris Nord</p>
-
-<br clear="left"/>
-
-<img src="https://media.licdn.com/dms/image/v2/D4E03AQE6W960oHvj7g/profile-displayphoto-shrink_200_200/B4EZZAPunCHEAg-/0/1744834599732?e=1752710400&v=beta&t=3v_xSXek9HFZZTx0vzI22pzobe7jCrBwBK7u9_5jR3c" alt="Amolitho Baldé" width="120" style="border-radius: 50%; margin-right: 15px;" align="left">
-
-**Edmond Kameni Junior**  
-💼 *Étudiant en Télécommunications & Réseaux*  
-🔗 [LinkedIn](https://www.linkedin.com/in/edmond-junior-kameni-6715a9278/)
-<p>Université Sorbonne Paris Nord</p>>
-
-<br clear="left"/>
 
 
