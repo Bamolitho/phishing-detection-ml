@@ -14,14 +14,12 @@
 - [🧪 Tests](#-tests)
 - [📁 Structure du projet](#-structure-du-projet)
 - [📄 Licence](#-licence)
-- [👤 Auteurs](#-auteurs)
-- [🙏 Remerciements](#-remerciements)
 
 ---
 
 ## 📸 Démo
 
-![Demo](./screenshots/200.gif)  
+![Demo](./demo/demo.gif)  
 >_ À venir
 
 ---
