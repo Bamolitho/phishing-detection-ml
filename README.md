@@ -12,6 +12,7 @@
 - [🛠️ Installation](#️-installation)
 - [▶️ Utilisation](#️-utilisation)
 - [📁 Structure du projet](#-structure-du-projet)
+- [Perspectives](#-perspectives)
 
 ---
 
@@ -71,7 +72,10 @@ cd chemin_vers_phishing-detection-ml
 sudo chmod +x launch_all.sh
 
 # 3. Pour lancer les 3 composantes (Modèle ML, la sonde, l'app flask contenant les fonctionnalités essentielles pour l'interface web)
-./launch_all.sh ou bash launch_all.sh  
+./launch_all.sh ou bash launch_all.sh
+```
+
+## Perspectives
 
 # 4. Ouvrir un navigateur pour accéder à l'interface web via l'adresse suivante
 http://localhost:5003
