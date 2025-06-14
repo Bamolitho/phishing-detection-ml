@@ -21,7 +21,7 @@
 
 ## 📸 Démo
 
-![Demo](https://giphy.com/explore/moving-pictures)  
+![Demo](./screenshots/200.gif)  
 >_ À venir
 
 ---
