@@ -11,9 +11,7 @@
 - [📦 Technologies utilisées](#-technologies-utilisées)
 - [🛠️ Installation](#️-installation)
 - [▶️ Utilisation](#️-utilisation)
-- [🧪 Tests](#-tests)
 - [📁 Structure du projet](#-structure-du-projet)
-- [📄 Licence](#-licence)
 
 ---
 
