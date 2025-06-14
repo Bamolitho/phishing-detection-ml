@@ -117,13 +117,11 @@ phishing-detection-ml/
 ├── 📁 utils/                    # 🔧 Fonctions utilitaires pour automatiser le traitement
 │   ├── __init__.py                       # Initialisation du module
 │   ├── convert_https_to_http.py         # Convertit les URLs HTTPS vers HTTP (utile pour sniffing)
-│   ├── convert_https_to_http.py         # ⚠️ Doublon, à supprimer ou fusionner
 │   ├── extract_features_from_http_dataset_csv.py  # Extrait les caractéristiques des URLs d’un CSV HTTP
 │   ├── extract_features_from_one_url.py           # Extrait les caractéristiques d’une seule URL
 │   ├── find_path.py                      # Trouve dynamiquement les chemins relatifs vers les fichiers
 │   ├── load_data.py                      # Charge les datasets dans des formats utilisables (Pandas, etc.)
-│   ├── send_url.py                       # Envoie une URL à l’API Flask pour analyse
-│   └── sql_inserer.py                    # Insère les résultats ou utilisateurs dans la base SQLite
+│   └──  send_url.py                       # Envoie une URL à l’API Flask pour analyse
 │ 
 ├── 📁 database/                 # 🗄️ Scripts et base de données pour la gestion des utilisateurs
 │   ├── __init__.py                       # Initialisation
