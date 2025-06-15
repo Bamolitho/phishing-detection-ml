@@ -74,7 +74,7 @@ sudo chmod +x launch_all.sh
 ./launch_all.sh ou bash launch_all.sh
 
 # 4. Ouvrir un navigateur pour accéder à l'interface web via l'adresse suivante
-http://localhost:5003
+http://localhost:5003/login
 ```
 ```bash
 phishing-detection-ml/
