@@ -16,6 +16,7 @@
 
 ## Démo
 **a. Lancement du projet**
+
 Pour démarrer le projet, il faut d’abord se positionner dans le répertoire qui contient tous les fichiers nécessaires. Une fois à cet endroit, on exécute le script launch_all.sh.
 Dès qu’on lance ce script, trois terminaux s’ouvrent automatiquement. L’un d’eux nous invite à entrer notre mot de passe, car la sonde réseau utilise sudo pour capturer les paquets – c’est une étape indispensable au bon fonctionnement du système.
 ![Lancement du projet](./demo/lancer_sonde.png)
