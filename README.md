@@ -135,6 +135,15 @@ sudo chmod +x launch_all.sh
 http://localhost:5003/login
 ```
 ## Perspectives
+
+📘 Descriptions des étapes (1 à 12)
+1. Capture réseau
+→ Sniff des paquets en temps réel sur une interface réseau choisie.
+
+2. Extraction des URLs
+→ Filtrage des paquets HTTP(S) et parsing pour récupérer les URLs.
+
+3. Vecteur de feat
 Développer d'autres modèles d'apprentissage automatique, tels que : Random Forest, Decision Tree, LLM, etc.
 Compléter les aspects liés à la gestion administrative : finaliser le profil administrateur, avec des fonctionnalités comme :
  – la gestion des usagers,
