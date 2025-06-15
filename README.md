@@ -9,9 +9,9 @@
 - [📸 Démo](#-démo)
 - [🚀 Fonctionnalités principales](#-fonctionnalités-principales)
 - [📦 Technologies utilisées](#-technologies-utilisées)
+- [📁 Structure du projet](#-structure-du-projet)
 - [🛠️ Installation](#️-installation)
 - [▶️ Utilisation](#️-utilisation)
-- [📁 Structure du projet](#-structure-du-projet)
 - [ Perspectives](#-perspectives)
 ---
 
@@ -47,35 +47,7 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 
 ---
 
-## 🛠️ Installation
-
-```bash
-# 1. Cloner le repo
-git clone https://github.com/Bamolitho/phishing-detection-ml.git
-cd phishing-detection-ml
-
-# 2. Créer un environnement virtuel
-python3 -m venv venv
-source venv/bin/activate  # ou .\venv\Scripts\activate sur Windows
-
-# 3. Installer les dépendances
-pip install -r requirements.txt
-```
-
-## ▶️ Utilisation
-```bash
-# 1. Se placer dans le dossier du projet, phishing-detection-ml.
-cd chemin_vers_phishing-detection-ml
-
-# 2. Ajouter des privilèges d'exécution pour l'utilisateur
-sudo chmod +x launch_all.sh
-
-# 3. Pour lancer les 3 composantes (Modèle ML, la sonde, l'app flask contenant les fonctionnalités essentielles pour l'interface web)
-./launch_all.sh ou bash launch_all.sh
-
-# 4. Ouvrir un navigateur pour accéder à l'interface web via l'adresse suivante
-http://localhost:5003/login
-```
+## Structure du projet
 ```bash
 phishing-detection-ml/
 │
@@ -134,6 +106,35 @@ phishing-detection-ml/
 └── requirements.txt           # Dépendances Python à installer avec `pip install -r requirements.txt`
 ```
 
+## 🛠️ Installation
+
+```bash
+# 1. Cloner le repo
+git clone https://github.com/Bamolitho/phishing-detection-ml.git
+cd phishing-detection-ml
+
+# 2. Créer un environnement virtuel
+python3 -m venv venv
+source venv/bin/activate  # ou .\venv\Scripts\activate sur Windows
+
+# 3. Installer les dépendances
+pip install -r requirements.txt
+```
+
+## ▶️ Utilisation
+```bash
+# 1. Se placer dans le dossier du projet, phishing-detection-ml.
+cd chemin_vers_phishing-detection-ml
+
+# 2. Ajouter des privilèges d'exécution pour l'utilisateur
+sudo chmod +x launch_all.sh
+
+# 3. Pour lancer les 3 composantes (Modèle ML, la sonde, l'app flask contenant les fonctionnalités essentielles pour l'interface web)
+./launch_all.sh ou bash launch_all.sh
+
+# 4. Ouvrir un navigateur pour accéder à l'interface web via l'adresse suivante
+http://localhost:5003/login
+```
 ## Perspectives
 
 
