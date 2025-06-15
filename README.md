@@ -32,7 +32,7 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 
 ---
 
-## 📦 Technologies utilisées
+## Technologies utilisées
 
 | Type        | Technologie                      |
 |-------------|----------------------------------|
