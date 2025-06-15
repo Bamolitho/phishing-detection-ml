@@ -3,19 +3,6 @@
 
 > Résumé : Quelqu'un va sur un site web utilisant http, on lui dit via notre interface web si ce site web est légitime ou non. 
 ---
-
-## 🧭 Table des matières
-
-- [📸 Démo](#-démo)
-- [🚀 Fonctionnalités principales](#-fonctionnalités-principales)
-- [📦 Technologies utilisées](#-technologies-utilisées)
-- [📁 Structure du projet](#-structure-du-projet)
-- [🛠️ Installation](#️-installation)
-- [▶️ Utilisation](#️-utilisation)
-- [ Perspectives](#-perspectives)
-
-Voici la version fonctionnelle :
-
 markdown
 ## 🧭 Table des matières
 
