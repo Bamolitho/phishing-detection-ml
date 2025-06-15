@@ -135,32 +135,35 @@ sudo chmod +x launch_all.sh
 http://localhost:5003/login
 ```
 ## Perspectives
+1. Développer d'autres modèles d'apprentissage automatique, tels que : Random Forest, Decision Tree, LLM, etc.
+  
+2. Compléter les aspects liés à la gestion administrative : finaliser le profil administrateur, avec des fonctionnalités comme :
+ - la gestion des usagers,
+ - une vue d'ensemble sur tout ce qui se passe sur les réseaux, etc.
+   
+3. Prendre en compte d'autres protocoles : tels que HTTPS, SMTP, SMTPS, IMAP, IMAPS, etc.
 
-📘 Descriptions des étapes (1 à 12)
-1. Capture réseau
-→ Sniff des paquets en temps réel sur une interface réseau choisie.
+4. Implémenter un système d’alerte en temps réel
+- Notifications par email ou interface web en cas de détection de phishing,
+- Ajout d’une priorité ou d’un niveau de menace.
 
-2. Extraction des URLs
-→ Filtrage des paquets HTTP(S) et parsing pour récupérer les URLs.
+5. Enrichir la base de données avec des métadonnées
+- Heure précise de détection, durée de la connexion, nom d’hôte, etc.
+- Cela permettrait des analyses plus poussées.
 
-3. Vecteur de feat
-Développer d'autres modèles d'apprentissage automatique, tels que : Random Forest, Decision Tree, LLM, etc.
-Compléter les aspects liés à la gestion administrative : finaliser le profil administrateur, avec des fonctionnalités comme :
- – la gestion des usagers,
- – une vue d'ensemble sur tout ce qui se passe sur les réseaux, etc.
-Prendre en compte d'autres protocoles : tels que HTTPS, SMTP, SMTPS, IMAP, IMAPS, etc.
-Implémenter un système d’alerte en temps réel
- – Notifications par email ou interface web en cas de détection de phishing.
- – Ajout d’une priorité ou d’un niveau de menace.
-Enrichir la base de données avec des métadonnées
- – Heure précise de détection, durée de la connexion, nom d’hôte, etc.
- – Cela permettrait des analyses plus poussées.
-Développer une API REST sécurisée : Pour permettre à d’autres outils ou systèmes de consulter ou d’envoyer des données.
-Intégrer une interface graphique plus avancée (avec dashboard) : Classement des utilisateurs selon l’activité ou la menace détectée.
-Mettre en place une sandbox ou une zone de test : Pour rejouer des paquets suspects ou entraîner des modèles de manière isolée.
-Ajout de l’apprentissage en ligne (online learning) : Le modèle s’améliore en continu à partir des nouvelles détections.
-Déploiement multi-machines (architecture distribuée) : Plusieurs sondes installées sur des machines différentes, toutes connectées à un serveur central.
-Détection de spoofing et d’attaques réseau spécifiques (ex : MITM, ARP Poisoning) : Étendre la portée à d’autres types de menaces, pas seulement le phishing.
-Journalisation avancée et audit : Garder une trace complète de toutes les actions du système pour des audits de sécurité.
-Mode entraînement utilisateur : Simuler des tentatives de phishing pour tester la vigilance des utilisateurs et les sensibiliser.
+6. Développer une API REST sécurisée : Pour permettre à d’autres outils ou systèmes de consulter ou d’envoyer des données.
+
+7. Intégrer une interface graphique plus avancée (avec dashboard) : Classement des utilisateurs selon l’activité ou la menace détectée.
+
+8. Mettre en place une sandbox ou une zone de test : Pour rejouer des paquets suspects ou entraîner des modèles de manière isolée.
+
+9. Ajout de l’apprentissage en ligne (online learning) : Le modèle s’améliore en continu à partir des nouvelles détections.
+
+10. Déploiement multi-machines (architecture distribuée) : Plusieurs sondes installées sur des machines différentes, toutes connectées à un serveur central.
+
+11. Détection de spoofing et d’attaques réseau spécifiques (ex : MITM, ARP Poisoning) : Étendre la portée à d’autres types de menaces, pas seulement le phishing.
+
+12. Journalisation avancée et audit : Garder une trace complète de toutes les actions du système pour des audits de sécurité.
+
+13. Mode entraînement utilisateur : Simuler des tentatives de phishing pour tester la vigilance des utilisateurs et les sensibiliser.
 
