@@ -13,6 +13,19 @@
 - [🛠️ Installation](#️-installation)
 - [▶️ Utilisation](#️-utilisation)
 - [ Perspectives](#-perspectives)
+
+Voici la version fonctionnelle :
+
+markdown
+## 🧭 Table des matières
+
+- [📸 Démo](#démo)
+- [🚀 Fonctionnalités principales](#fonctionnalités-principales)
+- [📦 Technologies utilisées](#technologies-utilisées)
+- [📁 Structure du projet](#structure-du-projet)
+- [🛠️ Installation](#installation)
+- [▶️ Utilisation](#utilisation)
+- [📈 Perspectives](#perspectives)
 ---
 
 ## 📸 Démo
