@@ -1,7 +1,7 @@
-# 🛡️ Détéction de site web non légitime
+# 🛡️ Détéction de site web légitime ou non 
 > _Un système complet pour capturer des URLs HTTP, extraire des caractéristiques, et détecter des tentatives de phishing en temps réel grâce à l'apprentissage automatique._  
 
-> Résumé : Quelqu'un va sur un site web utilisant http, on lui dit via notre interface web si ce site web est légitime ou non. 
+> Résumé : Quelqu'un va sur un site web utilisant http, on lui dit via notre interface web si ce site web est légitime ou non. Cette classification est faite via l'apprentissage automatique
 ---
 ## 🧭 Table des matières
 
