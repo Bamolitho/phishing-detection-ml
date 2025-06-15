@@ -105,7 +105,7 @@ phishing-detection-ml/
 └── requirements.txt           # Dépendances Python à installer avec `pip install -r requirements.txt`
 ```
 
-## 🛠️ Installation
+## Installation
 
 ```bash
 # 1. Cloner le repo
@@ -120,7 +120,7 @@ source venv/bin/activate  # ou .\venv\Scripts\activate sur Windows
 pip install -r requirements.txt
 ```
 
-## ▶️ Utilisation
+## Utilisation
 ```bash
 # 1. Se placer dans le dossier du projet, phishing-detection-ml.
 cd chemin_vers_phishing-detection-ml
