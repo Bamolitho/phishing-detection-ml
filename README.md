@@ -104,7 +104,7 @@ Ce projet propose un **système complet de détection de phishing en temps réel
 
 | Type        | Technologie                      |
 |-------------|----------------------------------|
-| Langage     | Python 3.11                      |
+| Langages     | Python 3.11, HTML, CSS, Bash                      |
 | Capture     | Scapy                            |
 | Machine Learning | TensorFlow, scikit-learn  , Réseaux de neurones (2 couches cachées avec des activations relu et une sortie avec une activation sigmoid  |
 | Données     | pandas, re, urllib               |
