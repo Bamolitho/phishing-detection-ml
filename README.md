@@ -3,7 +3,6 @@
 
 > Résumé : Quelqu'un va sur un site web utilisant http, on lui dit via notre interface web si ce site web est légitime ou non. 
 ---
-markdown
 ## 🧭 Table des matières
 
 - [📸 Démo](#démo)
@@ -15,14 +14,14 @@ markdown
 - [📈 Perspectives](#perspectives)
 ---
 
-## 📸 Démo
+## Démo
 
 ![Demo](./demo/demo.gif)  
 >_ À venir
 
 ---
 
-## 🚀 Fonctionnalités principales
+## Fonctionnalités principales
 Ce projet propose un **système complet de détection de phishing en temps réel** basé sur :
 - 📡 Capture des paquets HTTP en temps réel avec Scapy
 - 🧠 Extraction automatique de 13+ caractéristiques d'URL (IP, longueur, entropie, etc.)
