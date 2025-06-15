@@ -32,7 +32,7 @@ On atterrit alors sur la page de connexion.
 Se connecter, si on possède déjà un compte.
 Créer un compte, si on est nouveau.
 Lorsqu’on choisit de s’inscrire, plusieurs informations sont demandées : nom utilisateur, adresse électronique, nom complet, rôle (utilisateur ou administrateur), etc.
-![](./demo/à_remplacer.png)
+![Connexion ou création de compte](./demo/inscription.png)
 
 **À noter** : pour l’instant, seul le rôle d’utilisateur est pris en charge. La gestion d’administrateur fait partie des évolutions futures du projet.
 Une fois le formulaire rempli, on clique sur Créer un compte. Cette action nous redirige automatiquement vers la page de connexion.
@@ -44,11 +44,11 @@ On a aussi d’autres options :
 - Modifier le mot de passe,
 - Supprimer le compte,
 - ou tout simplement Se déconnecter.
-![](./demo/à_remplacer.png)
+![Navigation après connexion](./demo/profil_utilisateur.png)
 
 **e. Capture récente**
 Depuis le profil utilisateur, on peut cliquer sur Capture récente. Comme le compte vient d’être créé, il est normal qu’aucune capture ne soit encore affichée.
-
+![Capture récente](./demo/aucune_capture.png)
 
 Pour faire des captures et le résultat de la classification par le modèle ML, trois méthodes s’offrent à nous :
 - Faire un CURL vers un site : **curl example.com**.
@@ -56,7 +56,7 @@ Pour faire des captures et le résultat de la classification par le modèle ML, 
 - Passer par le navigateur, en ouvrant une URL HTTP.
 
 Une fois les captures disponibles, elles s’affichent dans l’interface web. 
-![](./demo/à_remplacer.png)
+![Capture récente](./demo/pkt_capturés.png)
 
 
 **f. Filtrage**
@@ -64,17 +64,19 @@ Plusieurs options permettent de filtrer les résultats :
 - Par le verdict, pour distinguer phishing ou légitime,
 - Par protocole, HTTP, HTTPS, SMTP, etc.
 - Par recherche d’adresse IP, URL, ou même un préfixe d’adresse IP.
-![](./demo/à_remplacer.png)
+![Filtrage](./demo/filtrage.png)
 Par ailleurs, deux boutons permettent d’exporter les données affichées au format CSV ou JSON.
 
 **g. Consulter des statistiques**
 Un diagramme circulaire illustre la répartition entre URL phishing (en rouge) et légitime (en vert). Juste en dessous, le taux de phishing est indiqué en pourcentage.
-![](./demo/à_remplacer.png)
+![Consulter des statistiques](./demo/stats.png)
 
 
 **h. Modifier son mot de passe ou supprimer son compte**
 Enfin, depuis le profil, il est possible de modifier le mot de passe, de supprimer le compte (avec un message d’alerte rappelant que cette action est irréversible), ou de se déconnecter.
-![](./demo/à_remplacer.png)
+![Modifier son mot de passe](./demo/changer_password.png)
+
+![Supprimer son compte](./demo/supprimer_compte.png)
 
 ---
 
