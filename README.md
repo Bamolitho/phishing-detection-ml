@@ -16,6 +16,7 @@
 
 ## Démo
 **a. Lancement du projet**
+
 Pour démarrer le projet, il faut d’abord se positionner dans le répertoire qui contient tous les fichiers nécessaires. Une fois à cet endroit, on exécute le script launch_all.sh.
 Dès qu’on lance ce script, trois terminaux s’ouvrent automatiquement. L’un d’eux nous invite à entrer notre mot de passe, car la sonde réseau utilise sudo pour capturer les paquets – c’est une étape indispensable au bon fonctionnement du système.
 ![Lancement du projet](./demo/lancer_sonde.png)
@@ -23,11 +24,13 @@ Dès qu’on lance ce script, trois terminaux s’ouvrent automatiquement. L’u
 L’interface active est détectée et utilisée automatiquement si elle n’était pas précisée lors du lancement du script.
 
 **b. Accès à l’interface web**
+
 Une fois le script lancé, on peut se rendre dans le terminal qui exécute l'application Flask. Un lien est affiché, basé sur l’adresse locale 127.0.0.1:5003. On peut simplement faire Ctrl + clic droit sur le lien puis l’ouvrir l’interface dans le navigateur.
 On atterrit alors sur la page de connexion.
 ![Accès à l’interface web](./demo/page_connexion.png)
 
 **c. Connexion ou création de compte**
+
 À partir de cette page, deux choix s’offrent à nous :
 Se connecter, si on possède déjà un compte.
 Créer un compte, si on est nouveau.
@@ -38,6 +41,7 @@ Lorsqu’on choisit de s’inscrire, plusieurs informations sont demandées : no
 Une fois le formulaire rempli, on clique sur Créer un compte. Cette action nous redirige automatiquement vers la page de connexion.
 
 **d. Navigation après connexion**
+
 Quand on se connecte, on est alors dirigé vers la page profil utilisateur.
 Cette page affiche différentes informations, telles que : le nom d’utilisateur, l’e-mail,le rôle attribué, ainsi que plusieurs boutons d’action : Voir les captures récentes, voir les statistiques des détections (notamment la répartition entre trafic légitime et phishing),
 On a aussi d’autres options : 
@@ -47,6 +51,7 @@ On a aussi d’autres options :
 ![Navigation après connexion](./demo/profil_utilisateur.png)
 
 **e. Capture récente**
+
 Depuis le profil utilisateur, on peut cliquer sur Capture récente. Comme le compte vient d’être créé, il est normal qu’aucune capture ne soit encore affichée.
 ![Capture récente](./demo/aucune_capture.png)
 
@@ -60,6 +65,7 @@ Une fois les captures disponibles, elles s’affichent dans l’interface web.
 
 
 **f. Filtrage**
+
 Plusieurs options permettent de filtrer les résultats :
 - Par le verdict, pour distinguer phishing ou légitime,
 - Par protocole, HTTP, HTTPS, SMTP, etc.
@@ -68,11 +74,13 @@ Plusieurs options permettent de filtrer les résultats :
 Par ailleurs, deux boutons permettent d’exporter les données affichées au format CSV ou JSON.
 
 **g. Consulter des statistiques**
+
 Un diagramme circulaire illustre la répartition entre URL phishing (en rouge) et légitime (en vert). Juste en dessous, le taux de phishing est indiqué en pourcentage.
 ![Consulter des statistiques](./demo/stats.png)
 
 
 **h. Modifier son mot de passe ou supprimer son compte**
+
 Enfin, depuis le profil, il est possible de modifier le mot de passe, de supprimer le compte (avec un message d’alerte rappelant que cette action est irréversible), ou de se déconnecter.
 ![Modifier son mot de passe](./demo/changer_password.png)
 
